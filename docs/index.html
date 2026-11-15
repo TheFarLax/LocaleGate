@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f2ea">
+  <meta name="description" content="Compare release translations against source copy and publish after GenLayer validator review.">
+  <title>LocaleGate | Release review</title>
+  <link rel="icon" href="./icon.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to release review</a>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="#review"><img src="./icon.png" width="34" height="34" alt="">LocaleGate</a>
+      <nav aria-label="Workspace"><a href="#review">Releases</a><a href="#activity">Activity</a></nav>
+      <div class="header-actions"><span class="network"><i></i>Studionet</span><button type="button" id="wallet">Connect wallet</button></div>
+    </div>
+  </header>
+  <main id="main" class="shell">
+    <section id="review-view">
+      <section class="hero">
+        <div>
+          <h1>Release review<span>.</span></h1>
+          <p>Check translated announcements against your approved copy before they go live.</p>
+        </div>
+        <button type="button" class="primary" id="new-release"><span aria-hidden="true">＋</span> New release</button>
+      </section>
+      <div class="workspace">
+        <aside class="sidebar" aria-label="Release navigation">
+          <form id="load-form">
+            <label for="release-id">Release ID</label>
+            <div class="lookup"><input id="release-id" name="release" inputmode="numeric" pattern="[1-9][0-9]{0,77}" required placeholder="1"><button type="submit">Load</button></div>
+          </form>
+          <div class="sidebar-demo"><button type="button" class="text-button" id="demo-release">Load example release <span aria-hidden="true">↗</span></button></div>
+          <div class="workflow">
+            <h2>Review workflow</h2>
+            <p>Choose the target languages, review each translation, then publish once every language matches.</p>
+            <a id="contract-link" target="_blank" rel="noreferrer" hidden>View contract <span aria-hidden="true">↗</span></a>
+          </div>
+        </aside>
+        <section class="release" aria-label="Release details">
+          <p class="notice" id="status" role="status">Connecting to GenLayer Studionet…</p>
+          <div id="record"></div>
+        </section>
+      </div>
+    </section>
+    <section id="activity-view" hidden>
+      <section class="hero"><div><h1>Activity<span>.</span></h1><p>Check the status of transactions submitted from this browser.</p></div></section>
+      <div id="activity" class="activity" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="shell footer"><span>LocaleGate</span><span>Powered by GenLayer Studionet</span></footer>
+  <dialog id="dialog" aria-labelledby="dialog-title">
+    <div class="dialog-head"><h2 id="dialog-title"></h2><form method="dialog"><button type="submit" aria-label="Close">×</button></form></div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
