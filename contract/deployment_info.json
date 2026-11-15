@@ -1,0 +1,42 @@
+{
+  "network": "Studionet",
+  "chain_id": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "contract_address": "0x4b8Ae33a365657986B5f0D4BA6195aE291505A2b",
+  "deploy_tx": "0xf6d0307f24072d23167721bb0e8428afcf3a0b06ca1ec1df8d8889a73af8834f",
+  "deploy_status": "FINALIZED",
+  "execution_result": "SUCCESS",
+  "source_matches_deployed_code": true,
+  "source_sha256": "1a58039bbd652f0c806e2b0102e34553eebbeed713d25e2a7f1fbf8a7f5d8b95",
+  "release_count_at_deployment": 0,
+  "demo": {
+    "release_id": "1",
+    "verdicts": [
+      "MATERIAL_DRIFT",
+      "MATCH"
+    ],
+    "release_status": "PUBLISHED",
+    "transactions": [
+      {
+        "method": "create_release",
+        "hash": "0xdf4a470e705e6ff5627d8b63a65222e6bec9840a1de7275c5adaab385592f2fa",
+        "status": "FINALIZED"
+      },
+      {
+        "method": "review_translation",
+        "hash": "0xb5738990db05ae32e1c4e8a6c90bc439eb93677805b7909c4c5da5760869207a",
+        "status": "FINALIZED"
+      },
+      {
+        "method": "review_translation",
+        "hash": "0x528d26084c66c7b4916d884779c678bdb5221adf825aa9445e0cd8953c3e154d",
+        "status": "FINALIZED"
+      },
+      {
+        "method": "publish_release",
+        "hash": "0x0dac7b876fe14f1a81725a75be3a1bec3e9972b0bd02e921030652e9542a5257",
+        "status": "FINALIZED"
+      }
+    ]
+  }
+}
